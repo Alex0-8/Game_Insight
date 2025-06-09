@@ -6,87 +6,125 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="js/functions.js" defer></script>
     <title>GameInsight</title>
 </head>
 <body>
 
 <!--Encabezaado del sitio-->
     <header>
-        <a href="index.html"><img src="img/logo.png" alt="logo" class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logotipo de GameInsight: reseñas de videojuegos" class="logo">
         </a>
 
-        <h1>Jugamos, Analizamos y Te Damos Una Reseña Objetiva ajsnansdoand</h1>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="en_proceso.html">Contacto</a></li>
-            <li><a href="en_proceso.html">Acerca de</a></li>
-        </ul>
+        <h1 tabindex="0">GameInsight</h1>
+        <nav role="navigation">
+            <ul>
+               
+                <li><a href="en_proceso.html">Contacto</a></li>
+                <li><a href="en_proceso.html">Acerca de</a></li>
+                <li><a href="#" id="modal-open">Subscribirse</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
+    <main role="main">
         <section class="subheader">
-            <h3>Análisis Más Recientes xd</h3>
+            <h2 tabindex="0">Jugamos, Analizamos y Te Damos Una Reseña Objetiva de tus juegos favoritos</h2>
+            <h3 tabindex="0">Análisis Más Recientes</h3>
         </section>
 
 <!--seccion de reseñas-->
-        <section class="juegos">
-
+    <section class="reviews">
 <!--reseña 1-->
-        <article class="reseña">
-            <a href="Horizon.html">
-                <div>
-                
-                    <img src="img/Horizon_Zero_Dawn.avif" alt="Horizon Zero Dawn Remastered-Analisis">
-                    <h2>Horizon Zero Dawn Remastered-Analisis</h2>
-                </div>
-            </a>
-                <p>Nixxes actualiza Horizon Zero Dawn con la tecnología de su secuela para que la primera aventura de Aloy luzca mejor que nunca.</p>
-        </article>
+    <article class="reseña">
+        <a href="Horizon.html">
+            <div>
+            
+                <img src="img/Horizon_Zero_Dawn.avif" alt="Horizon Zero Dawn Remastered">
+                <h2 lang="en">Horizon Zero Dawn Remastered-Analisis</h2>
+            </div>
+
+            <p>Nixxes actualiza Horizon Zero Dawn con la tecnología de su secuela para que la primera aventura de Aloy luzca mejor que nunca.</p>
+        </a>
+    </article>
 
 <!--reseña 2-->
-        <article class="reseña">
-            <a href="dbsz.html">
-                <div>
-                    <img src="img/Dragon-Ball-Sparking-Zero-Feature.jpg" alt="Dragon Ball: Sparking! Zero-Análisis">
-                    <h2>Dragon Ball: Sparking! Zero-Análisis</h2>
-                </div>
-            </a>
-                <p>Tras 17 años de espera, la saga Budokai Tenkaichi regresa con una nueva entrega que nos deleita con el simulador de combates de Dragon Ball más espectacular, completo y frenético que se ha hecho nunca.</p>
-        </article>
+    <article class="reseña">
+        <a href="dbsz.html">
+            <div>
+                <img src="img/Dragon-Ball-Sparking-Zero-Feature.jpg" alt="Dragon Ball: Sparking! Zero">
+                <h2 lang="en">Dragon Ball: Sparking! Zero-Análisis</h2>
+            </div>
+            <p>Tras 17 años de espera, la saga Budokai Tenkaichi regresa con una nueva entrega que nos deleita con el simulador de combates de Dragon Ball más espectacular, completo y frenético que se ha hecho nunca.</p>
+        </a>
+    </article>
 
 <!--reseña 3-->
-        <article class="reseña">
-            <a href="sonic.html">
-                <div>
-                    <img src="img/sonic_x_shadow.webp" alt="Sonic X Shadow Generations-Análisis">
-                    <h2>Sonic X Shadow Generations-Análisis</h2>
-                </div>
-            </a>
-                <p>Una fantástica colección de dos juegos con la que Sega no solo recupera una de las mejores entregas de Sonic, sino que también sorprende con una aventura completamente nueva protagonizada por Shadow que nos ha encantado.</p>
-        </article>
+    <article class="reseña">
+        <a href="sonic.html">
+            <div>
+                <img src="img/sonic_x_shadow.webp" alt="Sonic X Shadow Generations">
+                <h2 lang="en">Sonic X Shadow Generations-Análisis</h2>
+            </div>
+            <p>Una fantástica colección de dos juegos con la que Sega no solo recupera una de las mejores entregas de Sonic, sino que también sorprende con una aventura completamente nueva protagonizada por Shadow que nos ha encantado.</p>
+        </a>
+    </article>
 
 <!--reseña 4-->
-        <article class="reseña">
-            <a href="mario.html">
+            <article class="reseña">
+                <a href="mario.html">
+                    <div>
+                        <img src="img/mario_party.avif" alt="Super Mario Party Jamboree">
+                        <h2 lang="en">Super Mario Party Jamboree-Análisis</h2>
+                    </div>
+                    <p>Con un aluvión de modos de juego, más de 110 minijuegos y propuestas para jugar en local, en solitario y online, en este guateque hay mucho que hacer.</p>
+                </a>
+            </article>
+        </section>
+
+        <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <article class="modal-subscription" id="modal-content">
                 <div>
-                    <img src="img/mario_party.avif" alt="Super Mario Party Jamboree-Análisis">
-                    <h2>Super Mario Party Jamboree-Análisis</h2>
+                    <h2 id="modal-title">Subscribete</h2>
+                    <button  id="modal-close" 
+                        role="button" 
+                        aria-label="cerrar el formulario de subscripcion">
+                        <img src="img/iconos/x.svg" alt="cerrar el formulario de subscripción"></button>
                 </div>
-            </a>
-                <p>Con un aluvión de modos de juego, más de 110 minijuegos y propuestas para jugar en local, en solitario y online, en este guateque hay mucho que hacer.</p>
-        </article>
+                <p>Recibe las reviews de tus juegos favoritos</p>
+                
+                <form id="subscriptionForm" aria-label="formulario de subscripción a GameInsight">
+                    <label for="name">Nombre</label>
+                    <div>
+                        <input type="text" placeholder="Nombre" name="name" id="name" >
+                        <i class="name-icon" id="name-icon"></i>
+                        <p class="error-message" id="name-error"></p>
+                    </div>
+
+                    <label for="email">Correo Electronico</label>
+                    <div>
+                        <input type="email" name="email" placeholder="Correo Electronico" id="email">
+                        <i class="email-icon" id="email-icon"></i>
+                        <p class="error-message" id="email-error"></p>
+                    </div>
+                    <p id="succes-message"></p>
+                    <button type="submit">Subscribirse</button>
+                </form>
+            </article>
         </section>
     </main>
 
-    <hr>
-    <footer>
+    <footer role="contentinfo">
         <p><small>&copy; 2024 - GameInsight. Todos los derechos reservados. </small></p>
-        <ul>
-            <li><a href="en_proceso.html">Contacto</a></li>
-            <li><a href="en_proceso.html">Aviso Legal</a></li>
-            <li><a href="en_proceso.html">Politica de Cookies</a></li>
-        </ul>
+
+        <nav role="navigation">
+            <ul>
+                <li><a href="en_proceso.html">Contacto</a></li>
+                <li><a href="en_proceso.html">Aviso Legal</a></li>
+                <li><a href="en_proceso.html">Politica de Cookies</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>

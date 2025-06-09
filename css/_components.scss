@@ -1,0 +1,145 @@
+.no-scroll{
+    overflow: hidden;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.89);
+    z-index: 1000;
+}
+
+.modal-subscription {
+    width: 40%;
+    margin: auto;
+    border-radius: 8px;
+    text-align: center;
+    background-color: rgba(29, 18, 33, 0.72);
+    position: relative;
+    padding: 10px;
+
+    & > div:first-child button {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        position: absolute;    
+        top: 2px;
+        right: 5px;
+
+        img {
+            cursor: pointer;
+            border: none;
+            margin: 0;
+            box-shadow: none;
+            width: auto;
+            transition: all .3s ease;
+
+            &:hover{
+                transform: scale(.9);
+            }
+
+            @media (prefers-color-scheme: dark){
+                & {
+                    filter: invert(100%);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 830px){
+        width: 400px;
+    }
+
+    @media screen and (max-width: 450px){
+        width: 85%;
+    }
+
+    form{
+        width: 65%;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        div{
+            position: relative;
+        
+            input{
+                border-radius: 8px;
+                outline: none;
+                color: #000;
+                font-size: 19px;
+                border: 2px solid rgba(0, 117, 243, 0);
+                transition: all .3s ease;
+
+                &:focus{
+                    border: 2px solid #c92ff8;
+                }
+
+                @media screen and (max-width: 450px){
+                    width: 90%;
+                }
+            }
+
+            .error-message {
+                font-size: 17px;
+                color: #ff0000;
+            }
+
+            i {
+                position: absolute;
+                top: 1px;
+                right: 8px;
+
+                img {
+                    margin: 0;
+                    border: none;
+                    box-shadow: none;
+                    width: auto;
+                }
+            }
+        }
+
+        .succes-message {
+            font-size: 17px;
+            color: rgb(0, 255, 0);
+        }
+
+        .error-message{ 
+            font-size: 17px;
+            color: #dcff00;
+        }
+
+        button {
+            border-radius: 8px;
+            border: rgba(0, 0, 0, 0) 2px solid;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            cursor: pointer;
+            color: #000;
+            font-size: 15px;
+            background-color: aqua;
+            transition: all .3s ease;
+
+            &:hover{
+                transform: scale(.9);
+                border: rgb(231, 46, 255) 2px solid;
+            }
+        }
+
+        @media screen and (max-width: 450px){
+            width: 100%;
+        }
+    }
+}

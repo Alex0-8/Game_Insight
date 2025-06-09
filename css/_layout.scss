@@ -1,0 +1,317 @@
+* {
+    color: $primaryTxtColor;
+    font-family: $fontFamily;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    a {
+        text-decoration: none;
+    }
+
+     @media (prefers-color-scheme: dark){
+        color: #fff;
+    }
+}
+
+iframe{
+    width: 100%;
+}
+
+img {
+    border-radius: 8px;
+    width: 26.25rem;
+    max-width: 100%;
+    margin: 20px 0;
+    box-shadow: 0px 0px 30px #000;
+}
+
+/*---- seccion del header ----*/
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 20px;
+    background-color: $primaryBkgColor;
+    gap: 8vw;
+    margin-bottom: 20px;
+    border-bottom: #47f3d9 solid 2px;
+
+    a {
+        align-self: flex-start;
+        padding: 5px;
+        color: #960070;
+        transition: all .3s ease;
+        
+        &:hover{
+            color: #ff15e0;
+        }
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 41px;
+        color: #000;
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 540px){
+        h1 {
+        display: none;
+        }
+    }
+}
+
+.logo{
+    width: 70px;
+    padding: 7px;
+    border-radius: unset;
+    box-shadow: none;
+    margin: 0;
+}
+
+.subheader {
+    text-align: center;
+    width: 75%;
+    font-weight: 800;
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 420px){
+        width: 85%;
+
+        h2 {
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 26px;
+        }
+    }
+}
+
+/*---- seccion de reseñas ----*/
+.reviews {
+    width: 90%;
+    margin: 0 auto;
+    @include reviewsGrid;
+    justify-items: center;
+    padding: 16px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width: 420px){
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+}
+
+.reseña {
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: all .3s ease;
+    min-height: 100px;
+    max-width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+    box-shadow: 0px 0px 15px #5b4170;
+
+    h2 {
+        margin-bottom: 7px;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: #dedede;
+            transform: scale(0.9)
+        }   
+    }
+
+    @media screen and (max-width: 420px){
+        width: 85%;
+    }
+}
+
+/*---- galeria de img en la pagina de la review ----*/
+.reviews img {
+    border-radius: 8px;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 15px #000;
+}
+
+.review-gallery {
+    width: 85%;
+    margin: 10px auto 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+    align-items: end;
+
+    img {
+        margin: 0;
+    }
+}
+
+/*---- footer ----*/
+footer {
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    border-top: #47f3d9 solid 2px;
+    background-color: #cbf9f9;
+    gap: 15px;
+
+    p{
+        color: #fff;
+    }
+
+    a{
+        color: #960070;
+        transition: all .3s ease;
+        
+        &:hover{
+            color: #ff15e0;
+        }
+    }
+}
+
+// ajustes globales
+.review-video {
+    width: 50%;
+    margin: 20px auto 20px;
+
+    @media screen and (max-width: 820px){
+        width: 90%;
+    }
+}
+
+.review-nav{
+    width: 80%;
+    margin: 0 auto;
+
+    a{
+        color: #002fb5;
+        transition: all .3s ease;
+        &:hover{
+            color: #78ff66;
+        }
+    }
+}
+
+.full-review {
+    margin: 0 auto;
+    width: 85%;
+    min-width: 320px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 470px){
+        width: 95%;
+    }
+}
+
+.review-subHeader {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+    line-height: 28px;
+    color: #000;
+
+    img {
+        margin: 20px 0;
+    }
+
+    @media screen and (max-width: 820px){
+        width: 85%;
+    }
+
+    @media screen and (max-width: 470px){
+        width: 95%;
+    }
+}
+
+h2, h3 {
+    color: #000;
+    margin: 25px 0 10px;
+}
+
+
+/*paginas en especifico*/
+.horizon h3::first-letter {
+    color: #dd2e22;
+}
+
+.dbsz h3::first-letter {
+    color: #00feff;
+}
+
+.mario_party h3::first-letter {
+    color: #ff0000;
+}
+
+.sonic_x_shadow h3::first-letter {
+    color: #3045c1;
+}
+
+/*---- modo oscuro ----*/
+@media (prefers-color-scheme: dark) {
+    .reseña p {
+        color: #fdf4f4;
+    }
+    .reseña:hover {
+        background-color: #7c4bb1;
+    }
+
+    a:-webkit-any-link {
+        color: #3cf2ff
+    }
+
+    h2, h3 {
+        color: #fff;
+    }
+
+    header {
+        background-color: #7c4bb1;
+
+        a {
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+
+    body {
+        background-color: #222;
+        
+        p {
+            color: #fff;
+        }
+    }
+
+    footer {
+        background-color: #7c4bb1;
+
+        a {
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+}
